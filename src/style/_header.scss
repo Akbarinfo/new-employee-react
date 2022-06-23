@@ -1,0 +1,88 @@
+/* HEADER PART  */
+
+.header {
+  background-color: #fff;
+  box-shadow: 5px 18px 15px -12px rgba(34, 60, 80, 0.41);
+  padding: 12px;
+
+  &__searchbox {
+    width: 206px;
+    padding-left: 10px;
+
+    &:hover {
+      background-color: #f2f2f2;
+    }
+  }
+
+  &__search {
+    width: 100%;
+    background: none;
+    border: none;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 1.1876em;
+    letter-spacing: 0.00938em;
+    color: rgba(0, 0, 0, 0.50);
+    padding: 7px 15px;
+    cursor: text;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.30);
+    }
+  }
+
+  &__sicon {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.54);
+  }
+
+  &__box {
+
+
+  }
+
+  &__btn {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+  }
+
+  &__btnspan,
+  &__btnspanb {
+    position: absolute;
+    top: 0;
+    right: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: #f83245;
+    border-radius: 50%;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    padding: 0 6px;
+  }
+
+  &__btnspanb {
+    background-color: #333996;
+  }
+
+  &__icon {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.54);
+  }
+}

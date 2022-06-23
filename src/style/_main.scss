@@ -1,0 +1,173 @@
+/* MAIN PART  */
+
+.list {
+  background-color: #f5f4fd;
+  padding: 40px;
+
+  &__main {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    padding: 24px;
+  }
+
+  &__box {
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  &__label  {
+    position: relative;
+    width: 75%;
+    padding-left: 14px;
+  }
+
+  &__sicon {
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  &__search {
+    width: 100%;
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.226);
+    border-radius: 4px;
+    padding: 18px 40px;
+
+    &:hover {
+      border-color:rgba(0, 0, 0, 0.87);
+    }
+
+    &:focus {
+      border: 1px solid #333996;
+      outline: 1px solid #333996;
+    }
+  }
+
+  &__addbtn {
+    background: none;
+    border: 1px solid rgba(51, 57, 150, 0.5);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.75;
+    border-radius: 4px;
+    letter-spacing: 0.02857em;
+    color: #333996;
+    padding: 7px 21px;
+    margin: 4px;
+    transition: all 0.3s linear;
+
+    &:hover {
+      border: 1px solid #333996;
+      background-color: rgba(51, 57, 150, 0.04);
+    }
+  }
+
+  &__picon {
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 10px;
+  }
+
+  /* tabel part */
+
+  &__tabel {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  &__thead {
+    width: 100%;
+    display: table-header-group;
+  }
+
+  &__tr {
+    width: 100%;
+    display: table-row;
+
+    &:hover .list__td {
+      background-color: #fffbf2;
+    }
+  }
+
+  &__th {
+    display: table-cell;
+    background-color: #3c44b126;
+    padding: 16px;
+  }
+
+  &__thbtn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #333996;
+    transition: all 0.3s linear;
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.87);
+      opacity: 0.6;
+    }
+
+    &:hover .list__ticon {
+      opacity: 0.6;
+    }
+
+  }
+
+  &__ticon {
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.87);
+    padding: 0 32px 0 10px;
+    transition: all 0.4s linear;
+    opacity: 0;
+  }
+
+  &__body {
+    display: table-row-group;
+  }
+
+  &__td {
+    display: table-cell;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    color: #00000099;
+    padding: 16px;
+    transition: all 0.3s linear;
+  }
+
+  &__edit,
+  &__xbtn {
+    background-color: #3c44b126;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin: 4px;
+  }
+
+  &__xbtn {
+    background-color: #f8324526;
+  }
+
+}
+
+.bx-pencil,
+.bx-x
+ {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333996;
+}
+
+.bx-x {
+  color: #f83245;
+}

@@ -1,0 +1,166 @@
+/* Add part */
+
+.add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000007d;
+  transition: all 0.4s linear;
+
+  &__main {
+    width: 960px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 16px;
+  }
+
+  &__header {
+    padding: 16px 24px;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.0075em;
+    color: rgba(0, 0, 0, 0.87);
+
+  }
+
+  &__form {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 16px 24px;
+  }
+
+  &__label {
+    width: 80%;
+    margin: 8px;
+    cursor: pointer;
+  }
+
+  &__gender {
+    width: 80%;
+    margin: 8px;
+  }
+
+  &__input {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+    padding: 18.5px 14px;
+
+    &:hover {
+      border-color:rgba(0, 0, 0, 0.87);
+    }
+
+    &:focus {
+      border: 1px solid #333996;
+      outline: 1px solid #333996;
+    }
+  }
+
+  &__err {
+    font-size: 10px;
+    line-height: 1.66;
+    letter-spacing: 0.03333em;
+    color: #f44336;
+    margin-top: 3px;
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.00938em;
+    color: rgba(0, 0, 0, 0.54);
+  }
+
+  &__radio {
+    cursor: pointer;
+  }
+
+  &__check {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    color: rgba(0, 0, 0, 0.87);
+    margin-left: 15px;
+    cursor: pointer;
+  }
+
+  &__submit,
+  &__reset {
+    background-color: #333996;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 20%), 0px 2px 2px 0px rgba(0, 0, 0, 14%), 0px 1px 5px 0px rgba(0, 0, 0, 12%);
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    color: #fff;
+    padding: 8px 22px;
+    margin: 4px;
+    transition: all 0.3s linear;
+
+    &:hover {
+      background-color: #232769;
+    }
+  }
+
+  &__reset {
+    background-color: #e0e0e0;
+    color: rgba(0, 0, 0, 0.87);
+
+    &:hover {
+      background-color: #d5d5d5;
+    }
+  }
+
+  &__checke {
+    border-color: #333996;
+  }
+
+  &__errchecke {
+    color: #333996;
+  }
+
+  &__bag {
+    border-color: #f44336;
+    outline-color: #f44336;
+
+    &:focus {
+      border-color: #f44336;
+      outline-color: #f44336;
+    }
+
+    &:hover {
+      border-color: #f44336;
+      outline-color: #f44336;
+    }
+  }
+
+  &__err {
+    font-size: 12px;
+    line-height: 1.66;
+    letter-spacing: 0.03333em;
+    color: #f44336;
+    padding-top: 3px;
+    margin: 0 14px;
+  }
+
+  &__open {
+    display: flex;
+  }
+
+}
+
+select {
+  background-color: #fff;
+}

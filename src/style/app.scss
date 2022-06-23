@@ -1,0 +1,60 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #253053;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.site-left {
+  width: 17%;
+  height: 100vh;
+}
+
+.site-right {
+  display: block;
+  width: 83%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.none {
+  display: none;
+}
+
+
+@import './main';
+@import './header';
+@import './hero';
+@import './main';
+@import './addnew';

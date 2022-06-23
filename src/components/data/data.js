@@ -3,7 +3,7 @@
 let data = [
   {
     id: 1,
-    name: "Eshmatboy",
+   title: "Eshmatboy",
     email: "eshmatjon@mail.ru",
     number: "+998901234567",
     city: "Toshkent",
@@ -13,7 +13,7 @@ let data = [
 
   {
     id: 2,
-    name: "Toshmat",
+   title: "Toshmat",
     email: "toshmat@gamil.com",
     number: "+998992221133",
     depa: 'Development',
@@ -22,7 +22,7 @@ let data = [
 
   {
     id: 3,
-    name: "Raisbuva",
+   title: "Raisbuva",
     email: "raisbuva777@mail.ru",
     number: '+998937771585',
     depa: 'Hr',

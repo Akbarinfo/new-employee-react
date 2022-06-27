@@ -32,7 +32,7 @@ export default function EditItem({item, openEdit, setOpenEdit, title, email, num
         </div>
         <form onSubmit={addHandler} className="add__form d-flex flex-wrap" action id="form">
           <div className="col-6">
-            <label className="add__label" htmlFor="name"> 
+            <label className="add__label" htmlFor="name">
               <input onChange={(e) => setTitle(e.target.value)} className="add__input" defaultValue={title} type="text" id="name" placeholder="Full Name" />
               <span className="add__err" id="nameerr" />
             </label>

@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import AddPost from "./Addpost";
 import EditItem from "./EditItem ";
 import PostItem from "./PostItem";
 
-export default function Main() {
+export default function Main({search, setSearch}) {
 
   const [open, setOpen] = useState(false)
   const [openEdit, setOpenEdit] = useState(false)
 
   const data = useSelector(state => state.post)
 
+
+  const searchHandler = (e) => {
+    setSearch(data.filter(item => item.title.toLowerCase().includes(e.target.value.toLowerCase())));
+  }
+
+  useEffect(() => {
+    setSearch(data);
+  }, [data]);
 
   const openModalHandler = () => {
     setOpen(!open)
@@ -24,7 +32,7 @@ export default function Main() {
           <div className="list__box d-flex justify-content-between">
             <label className="list__label" htmlFor="lsearch">
               <i className="bx bx-search list__sicon" />
-              <input className="list__search" id="search" type="text" placeholder="Search Employees" />
+              <input onChange={searchHandler} className="list__search" id="search" type="text" placeholder="Search Employees" />
             </label>
             <button onClick={openModalHandler} className="d-flex align-items-center list__addbtn" id="addnewbtn"><i className="bx bx-plus list__picon" /> Add New</button>
           </div>
@@ -40,7 +48,7 @@ export default function Main() {
             </thead>
             <tbody className="list__body" id="tbody">
             {
-              data.map((item, key) => (
+              search.map((item, key) => (
                   <PostItem key={key+879} item={item} openEdit={openEdit} setOpenEdit={setOpenEdit}/>
               ))
             }

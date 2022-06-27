@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addUser } from "../../store/newItem";
@@ -6,11 +7,45 @@ import { addUser } from "../../store/newItem";
 export default function AddPost(props) {
 
   let [title, setTitle] = useState('')
-  let [email, setemail] = useState('')
+  let [email, setemail] = useState('ad@.')
   let [number, setnumber] = useState('')
   let [depa, setdepa] = useState('')
   let [data, setdata] = useState('')
   let [city, setcity] = useState('')
+
+  //Validtor
+  let [titl, setTitl] = useState('')
+  let [emai, setemai] = useState(true)
+  let [numbe, setnumbe] = useState('')
+  let [cit, setcit] = useState('')
+
+  useEffect(() => {
+      if(title.match(/[0-9]/) != null) {
+        setTitl(true)
+      }
+      else{
+        setTitl(false)
+      }
+      if(email.includes('@') || email.includes('.')) {
+        setemai(false)
+      } else{
+        setemai(true)
+      }
+
+      if(number.match(/[a-z]/) != null || number.match(/[A-Z]/) != null) {
+        setnumbe(true)
+      } else{
+        setnumbe(false)
+      }
+
+      if(city.match(/[0-9]/) != null) {
+        setcit(true)
+      }
+      else{
+        setcit(false)
+      }
+
+  }, [title, email, number, city])
 
   const dispatch = useDispatch()
 
@@ -25,7 +60,7 @@ export default function AddPost(props) {
       data: data
     }))
   }
-
+  
   const canselModal = () => {
     props.setOpen(! props.open)
   }
@@ -41,19 +76,20 @@ export default function AddPost(props) {
           <div className="col-6">
             <label className="add__label" htmlFor="name">
               <input onChange={(e) => setTitle(e.target.value)} className="add__input" type="text" id="name" placeholder="Full Name" />
-              <span className="add__err" id="nameerr" />
+              <span className={`add__err ${titl ? "block" : "none"}`} id="nameerr">* Numbers cannot be entered in the login</span>
             </label>
             <label className="add__label" htmlFor="email">
               <input onChange={(e) => setemail(e.target.value)} className="add__input" type="text" id="email" placeholder="Email" />
-              <span className="add__err" id="mailerr" />
+              <span className={`add__err ${emai ? "block" : "none"}`} id="nameerr">Error</span>
             </label>
             <label className="add__label" htmlFor="number">
-              <input onChange={(e) => setnumber(e.target.value)} className="add__input" type="text" id="number" maxLength={13} placeholder="Mobile" />
-              <span className="add__err" id="numerr" />
+              <input onChange={(e) => setnumber(e.target.value)} className="add__input" type="text" id="number" maxLength="13" placeholder="Mobile" />
+              <span className={`add__err ${numbe ? "block" : "none"}`} id="nameerr">Error</span>
             </label>
             <label className="add__label" htmlFor="city">
               <input onChange={(e) => setcity(e.target.value)} className="add__input" type="text" id="city" placeholder="City" />
-              <span className="add__err" id />
+              <span className={`add__err ${cit ? "block" : "none"}`} id="nameerr">Error</span>
+
             </label>
           </div>
           <div className="col-6">
